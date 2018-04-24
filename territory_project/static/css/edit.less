@@ -1,0 +1,285 @@
+
+@text_color: #4682B4;
+
+.content-wrapper {
+   padding-top: 4em;
+   padding-bottom: 2em;
+}
+
+/* CARDS */
+
+.text-title { color: @text_color; }
+
+.card.compania-datos-direccion { min-height: 246px; }
+
+.card {
+    height: auto;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 1.5em;
+}
+
+.card .card-body label {
+    width: 55%;
+    vertical-align: bottom;
+}
+
+.card .card-body input {
+    width: 44%;
+    border:none;
+    border: 1px solid #d5d8dc;
+    height: 36px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.card .card-body select {
+    width: 44%;
+    height: 36px;
+    border:none;
+    border: 1px solid #d5d8dc;
+    border-radius: 3px;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-right: 25px;
+    margin: 0;
+    background-image: url("../img/arrow.png");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 96% center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.span-irpf { font-size: 14px; }
+
+/* INPUT + */
+
+.div-new-compania,
+.div-new-tarifa
+{
+    height: 38px !important;
+}
+
+.div-new-compania input,
+.div-new-tarifa input,
+.div-new-cliente input
+{
+    height: 36px !important;
+    width: 100%;
+    cursor: pointer !important;
+    padding: 0 8px;
+    border: none;
+    border: 1px solid #4682B4 !important;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #4682B4;
+}
+
+.div-new-compania input:hover,
+.div-new-tarifa input:hover,
+.div-new-cliente input:hover
+{
+    background-color: #4682B4;
+    color: #FFF;
+}
+
+/* DIVS DISPLAY NONE */
+
+div.new-compania,
+div.new-tarifa,
+div.new-cliente
+{
+    display: none;
+}
+
+/* SELECT 2 */
+
+.select2 {
+    height: 36px !important;
+    width: 44% !important;
+ }
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 100%;
+}
+
+.select2-container--default .select2-selection--single span {
+    padding-top: 3px;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    width: 20px;
+}
+
+/* --- BTNS --- */
+
+.btn-guardar {
+    z-index: 5;
+    width: 230px;
+    max-width: 100%;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: bold;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #4682B4;
+}
+
+.btn-continuar {
+    cursor: pointer;
+    z-index: 5;
+    width: 230px;
+    max-width: 100%;
+    color: #FFF;
+    font-weight: bold;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #4682B4;
+}
+
+.div-btn-guardar { text-align: left; }
+
+.btn-cancelar button {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 275px;
+    width: 230px;
+    max-width: 100%;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: bold;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #9A9392;
+}
+
+// SWITCH
+
+.onoffswitch {
+    float: right;
+    position: relative;
+    width: 70px;
+    -webkit-user-select:none;
+       -moz-user-select:none;
+       -ms-user-select: none;
+}
+
+.onoffswitch input { display: none; }
+
+.onoffswitch-label {
+    width: 70px !important;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 25px;
+    padding: 0;
+    line-height: 25px;
+    border: 2px solid #E3E3E3;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+
+.onoffswitch-label:before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 45px;
+    border: 2px solid #E3E3E3;
+    border-radius: 25px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch input:checked + .onoffswitch-label { background-color: #2ECC71; }
+.onoffswitch input:checked + .onoffswitch-label, .onoffswitch input:checked + .onoffswitch-label:before { border-color: #2ECC71; }
+.onoffswitch input:checked + .onoffswitch-label:before { right: 0px; }
+
+/* --- MEDIAQUERIES --- */
+
+@media (max-width: 1450px) {
+    .container-datos-facturacion {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .container-datos-tarifa {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 991px) {
+    .btn-continuar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .card .card-body label { width: 100%; }
+    .card .card-body input { width: 100%; }
+    .card .card-body select { width: 100%; }
+    .card .card-body .select2 { width: 100% !important; }
+
+    .div-new-tarifa label { display: none; }
+}
+
+@media screen and (max-width: 576px) {
+
+    .div-btn-guardar input { width: 100%; }
+
+    .div-btn-cancelar {
+        padding: 15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .div-btn-cancelar button {
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+
+    .card-body .col-12 { padding-left: 0; padding-right: 0;}
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 360px) {
+}

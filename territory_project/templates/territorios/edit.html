@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Territorio</title>
+</head>
+<body>
+    <div>
+        <form action="/territorios/handle_edit/" method="post" class="col-12">
+            {% csrf_token %}
+            <input type="hidden" name="id" id="id" value="{{ data.id }}">
+            <label for="numero">Número: </label>
+            {% if data.numero %}
+                <input type="text" name="numero" id="numero" value="{{ data.numero }} ">
+            {% else %}
+                <input type="text" name="numero" id="numero">
+            {% endif %}
+
+            <label for="campania">Campaña: </label>
+            {% if data.campania == "1" %}
+                <input type="checkbox" name="campania" id="campania" checked="checked">
+            {% else %}
+                <input type="checkbox" name="campania" id="campania">
+            {% endif %}
+
+            <label for="lluvia">Lluvia: </label>
+            {% if data.lluvia == "1" %}
+                <input type="checkbox" name="lluvia" id="lluvia" checked="checked">
+            {% else %}
+                <input type="checkbox" name="lluvia" id="lluvia">
+            {% endif %}
+
+            <label for="zona">Zona: </label>
+            {% if data.zona %}
+                <input type="text" name="zona" id="zona" value="{{ data.zona }}">
+            {% else %}
+                <input type="text" name="zona" id="zona" value="">
+            {% endif %}
+
+            {% if data.estado == "1" %}
+                <span>Entregado</span>
+            {% else %}
+                <span>Disponible</span>
+            {% endif %}
+
+            {% if accion == "Editar" %}
+                <input type="submit" value="Editar">
+            {% else %}
+                <input type="submit" value="Crear">
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

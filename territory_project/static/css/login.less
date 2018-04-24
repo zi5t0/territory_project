@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+/* ---  COLOR ---  */
+@backgroundBody: #F1F3F5;
+@colorBlanco: #FFF;
+@colorBase: #167ED3;
+@colorNegro: #444;
+
+
+/* ---  BASIC ---  */
+
+body {
+   font-family: 'Lato', sans-serif;
+   height: 100vh;
+   background-color: @backgroundBody;
+   background-image: url("../img/subtle_dots.png");
+}
+
+* { box-sizing: border-box; }
+
+*:focus { outline: none !important; }
+
+a {
+   text-decoration: none !important;
+   color: #444;
+}
+
+/* CONTAINER */
+
+.container {
+   width: 100%;
+   min-height: 100%;
+   padding-top: 15%;
+}
+
+.container-form {
+   border: none;
+   width: 100%;
+   height: 100%;
+   max-width: 500px;
+   min-height: 100%;
+   padding: 35px 20px;
+   background-color: @colorBlanco;
+   -webkit-border-radius: 15px 15px 15px 15px;
+           border-radius: 15px 15px 15px 15px;
+   -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
+           box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
+}
+
+/* FORM */
+
+.form-control:focus {
+   border-color: none !important;
+   box-shadow: none !important;
+}
+
+.form-row {
+   margin-right: 0px;
+   margin-left: 0px;
+}
+
+.form-group { margin-bottom: 0; }
+
+.form-inline { margin: 5px 0; }
+
+input[type=submit] {
+   background-color: @colorBase;
+   border: none;
+   color: @colorBlanco;
+   font-weight: bold;
+   padding: 10px;
+   margin: 10px 5px;
+   margin-bottom: 0;
+   text-transform: uppercase;
+   font-size: 16px;
+   cursor: pointer;
+   -webkit-border-radius: 5px 5px 5px 5px;
+           border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text],
+input[type=password] {
+   background-color: @backgroundBody;
+   border: none;
+   color: @colorNegro;
+   padding: 15px 20px 15px 45px;
+   font-size: 16px;
+   margin: 5px;
+   -webkit-border-radius: 5px 5px 5px 5px;
+           border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text] {
+   background-image: url(https://miloluca.github.io/playground/001_User-Login/icons/user.svg);
+   background-repeat: no-repeat;
+   background-size: 20px;
+   background-position: 16px center;
+}
+
+input[type=password] {
+   background-image: url(https://miloluca.github.io/playground/001_User-Login/icons/lock.svg);
+   background-repeat: no-repeat;
+   background-size: 20px;
+   background-position: 16px center;
+}
+
+input[type=submit]:focus, input[type=submit]:hover,  {
+   background-color: @colorBase;
+   color: @colorBlanco;
+}
+
+input[type=text]:focus, input[type=password]:focus { background-color: @backgroundBody; }
+input[type=text]:placeholder, input[type=password]:placeholder { color: #FFF; }
+
+/* --- MediaQueries --- */

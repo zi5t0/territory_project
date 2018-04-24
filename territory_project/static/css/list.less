@@ -1,0 +1,162 @@
+@navbar_svg: #adb5bd;
+@nav_link: #868e96;
+@backgroundColor_2: #343a40;
+@colorBlanco: #FFF;
+@color_svg_trash: #e74c3c;
+@td_1: #5DADE2 ;
+@td_2: #F5B041;
+@td_3: #58D68D;
+
+.content-wrapper { padding-top: 1em; }
+
+// COMPANY
+
+.div-btn-create-company,
+.div-btn-create-tarifa,
+.div-btn-create-producto
+{
+    position: fixed;
+    top: 12px;
+    z-index: 1500;
+    margin-left: 200px;
+}
+
+.div-btn-edit-group {
+    position: fixed;
+    top: 12px;
+    z-index: 1500;
+    margin-left: 310px;
+}
+
+.div-btn-create-company a,
+.div-btn-create-tarifa a,
+.div-btn-create-producto a,
+.div-btn-edit-group a
+{
+    width: 100%;
+}
+
+.div-btn-create-company button,
+.div-btn-create-tarifa button,
+.div-btn-create-producto button,
+.div-btn-edit-group button
+{
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: @nav_link;
+    cursor: pointer;
+}
+
+.div-btn-create-company button:hover,
+.div-btn-create-tarifa button:hover,
+.div-btn-create-producto button:hover,
+.div-btn-edit-group button:hover
+{
+    color: @navbar_svg;
+}
+
+svg.fa-plus,
+svg.btn-min-pencil
+{
+    width: 10px !important;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+// FILTER
+
+.div-btn-filter {
+    position: fixed;
+    top: 15px;
+    z-index: 1500;
+    margin-left: 100px;
+}
+
+.div-btn-filter button {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: @nav_link;
+    cursor: pointer;
+}
+
+.div-btn-filter button:hover { color: @navbar_svg; }
+
+.div-btn-filter svg.fa-circle {
+    width: 10px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+// TABLE
+
+table {
+    text-align: center;
+}
+
+.table-companias thead th,
+.table-tarifas thead th,
+.table-productos thead th
+{
+    background-color: @backgroundColor_2;
+    padding: 10px;
+    color: @colorBlanco;
+}
+
+.table-companias thead th:first-child {
+   width: 90%;
+}
+
+.table-companias thead tr:first-child th:first-child,
+.table-tarifas thead tr:first-child th:first-child,
+.table-productos thead tr:first-child th:first-child,
+{
+    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+}
+.table-companias thead tr:first-child th:last-child,
+.table-tarifas thead tr:first-child th:last-child,
+.table-productos thead tr:first-child th:last-child
+{
+    border-top-right-radius: 0.25rem;
+}
+
+
+table tbody tr td { padding: 10px; }
+table tbody tr td.options button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+table tbody tr td.options button svg { font-size: 20px; }
+table tbody tr td.options button svg.fa-trash { color: @color_svg_trash; }
+
+.td_1 {
+    background-color: @td_1;
+    color: @colorBlanco;
+}
+
+.td_2 {
+    background-color: @td_2;
+    color: @colorBlanco;
+}
+
+.td_3 {
+    background-color: @td_3;
+    color: @colorBlanco;
+}
+
+// MEDIAQUERIES
+
+@media (max-width: 1550px) {
+
+    table.table-productos {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0;
+    }
+}

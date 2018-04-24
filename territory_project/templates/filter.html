@@ -1,0 +1,24 @@
+{% block messages %}
+   {% if filter %}
+
+    <div class="row in-down container-filter">
+        <div class="col-12 d-flex justify-content-center px-0">
+            <form action="" method="get" class="form-filter col-md-12" id="form-filter">
+                <table class="d-flex justify-content-center text-center">
+                    {{ filter.form.as_table }}
+                </table>
+                <input type="hidden" name="filter" value="True">
+                <div class="col-md-12 div-input-filter">
+                    <input type="submit" value="Filtrar" />
+                </div>
+            </form>
+        </div>
+        <div class="col-6 div-restablecer text-center">
+            <a href="{{request.path}}?filter=True" class="btn-restablecer">
+                <button>Restablecer</button>
+            </a>
+        </div>
+    </div>
+
+   {% endif %}
+{% endblock %}

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+/* ---  BASIC ---  */
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    background-color: #FFF;
+}
+
+* { box-sizing: border-box; }
+*:focus { outline: none !important;}
+
+a {
+    text-decoration: none !important;
+    color: #333;
+}
+
+/* ------- C1 ------- */
+
+.c1 {
+    padding: 40px 20px;
+    padding-bottom: 10px;
+    float: left;
+}
+
+/* data-crm */
+
+.c1 .data-crm { margin-bottom: 30px; }
+
+.c1 .data-crm h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.c1 .data-crm p { margin: 0; }
+
+/* cuenta-abono */
+
+.c1 .cuenta-abono h4 {
+    border: 1px solid #333;
+    -webkit-border-radius: 10px ;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+    border-bottom: none;
+}
+
+.c1 .cuenta-abono p {
+    border: 1px solid #333;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* ------- C2 ------- */
+
+.c2 {
+    padding: 40px 10px;
+    padding-bottom: 10px;
+    float: left;
+    padding-right:  0;
+}
+
+/* N-factura */
+
+.c2 .n-factura { margin-bottom: 20px; }
+
+.c2 .n-factura h4 {
+    margin: 0;
+    border: 1px solid #333;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 4px 10px;
+    font-size: 20px;
+}
+
+/* Page-date */
+
+.c2 .page-date {
+     margin-bottom: 40px !important;
+     margin-left: 15px;
+ }
+
+.c2 .page-date .page {
+    margin: 0;
+    border: 1px solid #333;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px 0px;
+    float: left;
+}
+
+.c2 .page-date .date {
+    margin: 0;
+    border: 1px solid #333;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 10px 10px 0px;
+    padding: 5px 0px;
+    border-left: none;
+    border-bottom: 1px solid #333;
+    float: left;
+}
+
+.c2 .page-date .date h5,
+.c2 .page-date .page h5
+{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.c2 .page-date .date p,
+.c2 .page-date .page p
+{
+    margin: 0;
+    border-top: 1px solid #333;
+}
+
+/* Compania */
+
+.c2 .compania p { text-transform: uppercase; }
+
+
+/* ------- TABLE ------- */
+
+.table thead tr { text-align: center; }
+
+
+.table thead tr th {
+    background-color: #F1F3F5 !important;
+    color: #333;
+    border: none !important;
+
+}
+.table thead tr th:first-child { border-top-left-radius: 10px; }
+.table thead tr th:last-child { border-top-right-radius: 10px; }
+
+.table thead th { border-bottom: none !important;}
+
+.table tbody td {
+    text-align: center;
+    border-bottom: 1px solid #F1F3F5;
+}
+
+/* ------- TOTAL ------- */
+
+.total {
+    border: 1px solid #333;
+    -webkit-border-radius: 10px ;
+    border-radius: 10px;
+    margin-right: 5px;
+    float: right;
+}
+
+.total h5 {
+    height: 30px;
+    margin:0;
+}
+
+.total .total-right,
+.total .total-left { float: left;}
+
+.total .total-right h5 {
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+.total .total-right p {
+    border-left: 1px solid #333;
+    margin: 0;
+    padding: 5px;
+}
+
+.total .total-left p {
+    margin: 0;
+    padding: 5px;
+}

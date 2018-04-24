@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Territorio</title>
+</head>
+<body>
+    <div>
+        <div class="acciones">
+            <a href="edit/">
+                <button>Crear</button>
+            </a>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Campaña</th>
+                        <th>Lluvia</th>
+                        <th>Zona</th>
+                        <th>Estado</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                {% for t in territorios %}
+                    <tr>
+                        <!-- Número territorio-->
+                        <td>{{ t.numero}}</td>
+
+                        <!-- Campaña -->
+                        {% if t.campania == 0 %}
+                            <td>No</td>
+                        {% else %}
+                            <td>Si</td>
+                        {% endif %}
+
+                        <!-- Lluvia -->
+                        {% if t.lluvia == 0 %}
+                            <td>No</td>
+                        {% else %}
+                            <td>Si</td>
+                        {% endif %}
+
+                        <!-- Zona -->
+                        <td>{{ t.zona}}</td>
+
+                        <!-- Estado -->
+                        {% if t.estado == 0 %}
+                            <td>Disponible</td>
+                        {% else %}
+                            <td>Entregado</td>
+                        {% endif %}
+                        <td><a href="edit/?id={{ t.id }}">Editar</a></td>
+                        <td><a href="delete/?id={{ t.id }}">Borrar</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "body.html" %}
+{% block title %}
+   Inicio
+{% endblock %}
+{% block estilos %}
+    {% load staticfiles %}
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet/less" type="text/css" href="{% static 'css/menu.less' %}">
+    <link rel="stylesheet/less" type="text/css" href="{% static 'css/index.less' %}">
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+{% block content %}
+    <div class="index-text my-auto">
+        <ul>
+            <li><a href="/territorios/">Territorio</a></li>
+            <li><a href="/hermanos/">Hermano</a></li>
+            <li><a href="/asignar/">Asignar</a></li>
+            <li><a href="/devolver/">Devolver</a></li>
+            <li><a href="/historico/">Historico</a></li>
+        </ul>
+    </div>
+{% endblock %}

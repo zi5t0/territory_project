@@ -1,0 +1,49 @@
+{% block pagination %}
+    {% if 'filter' in request.get_full_path or 'page' in request.get_full_path %}
+    <div class="d-flex justify-content-end in-right">
+        <nav class="col-12 text-right px-0">
+            <span class="mr-5"> Mostrando {{ data.paginator.count }} resultados</span>
+            <ul class="pagination d-inline-flex">
+                {% if data.has_previous %}
+                <li class="page-item d-inline-flex previous-link">
+                    <a href="{{request.get_full_path}}&page=1" class="next round page-link"><i class="fas fa-angle-double-left"></i></a>
+                    <a href="{{request.get_full_path}}&page={{ data.previous_page_number }}" class="previous round page-link"><i class="fas fa-angle-left"></i></a>
+                </li>
+                {% endif %}
+                <li class="page-item d-inline-flex"><a class="page-link page-1 previous">{{ data.number }}</a></li>
+                <li class="page-item d-inline-flex"><a class="page-link text-de">de</a></li>
+                <li class="page-item d-inline-flex"><a class="page-link page-final">{{ data.paginator.num_pages }}</a></li>
+                {% if data.has_next %}
+                <li class="page-item d-inline-flex">
+                    <a href="{{request.get_full_path}}&page={{ data.next_page_number }}" class="next round page-link"><i class="fas fa-angle-right"></i></a>
+                    <a href="{{request.get_full_path}}&page={{ data.paginator.num_pages }}" class="next round page-link"><i class="fas fa-angle-double-right"></i></a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    {% else %}
+    <div class="d-flex justify-content-end in-right">
+        <nav class="col-12 text-right px-0">
+            <span class="mr-5"> Mostrando {{ data.paginator.count }} resultados</span>
+            <ul class="pagination d-inline-flex">
+                {% if data.has_previous %}
+                <li class="page-item d-inline-flex">
+                    <a href="{{request.get_full_path}}?page=1" class="next round page-link"><i class="fas fa-angle-left"></i></a>
+                    <a href="{{request.get_full_path}}?page={{ data.previous_page_number }}" class="previous round page-link"><i class="fas fa-angle-double-left"></i></a>
+                </li>
+                {% endif %}
+                <li class="page-item d-inline-flex"><a class="page-link page-1">{{ data.number }}</a></li>
+                <li class="page-item d-inline-flex"><a class="page-link text-de">de</a></li>
+                <li class="page-item d-inline-flex"><a class="page-link page-final">{{ data.paginator.num_pages }}</a></li>
+                {% if data.has_next %}
+                <li class="page-item d-inline-flex">
+                    <a href="{{request.get_full_path}}?page={{ data.next_page_number }}" class="next round page-link"><i class="fas fa-angle-right"></i></a>
+                    <a href="{{request.get_full_path}}?page={{ data.paginator.num_pages }}" class="next round page-link"><i class="fas fa-angle-double-right"></i></a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    {% endif %}
+{% endblock %}

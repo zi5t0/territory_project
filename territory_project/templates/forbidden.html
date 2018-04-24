@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Error</title>
+        {% load staticfiles %}
+            <!-- CDN -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+            <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+            <link rel="stylesheet" href="{% static  'css/restringido.css' %}">
+    </head>
+    <body>
+    <div class="color">
+        <div class="container">
+            <div class="row container-fluid container-prohibited">
+                <!-- Icono -->
+                <div class="col-md-12 col-lg-4 container-img-png">
+                    <div class="col-sm-12 d-flex justify-content-center">
+                        <img src="{% static '../static/img/prohibido.png' %}" class="img-fluid" alt="icono Materfile" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-8 text-center">
+                    <div class="div-text col-sm-12 ">
+                        <h1 class="">Acceso restringido</h1>
+                        <h2 class="">No puede ver el contenido de esta sección</h2>
+                    </div>
+                    <div class="col-sm-12 text-centerd mt-3">
+                    {% if user.is_authenticated %}
+                        <a href="/logout/">
+                            <button type="button" class="btn btn-cerrar-sesion">Cerrar Sesión</button>
+                        </a>
+                    {% else %}
+                        <a href="/">
+                            <button type="button" class="btn btn-iniciar-sesion">Iniciar Sesión</button>
+                        </a>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    </body>
+</html>

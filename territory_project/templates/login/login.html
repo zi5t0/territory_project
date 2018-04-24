@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="author" content="">
+	<title>Iniciar sesión</title>
+	{% load staticfiles %}
+	<!-- CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet/less" type="text/css" href="{% static 'css/login.less' %}">
+	<link rel="stylesheet/less" type="text/css" href="{% static 'css/messages.less' %}">
+	<!-- FAVICON -->
+	<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}" />
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="div-messages">
+			{% include "messages.html" %}
+		</div>
+		<div class="container-fluid container-form">
+			<div class="row container-login-form">
+				<div class="col-12">
+					<form action='/login/' method='POST' class="w-100">
+						{% csrf_token %}
+						<div class="form-row form-group col-12">
+							<input type='text' class="form-control w-100" name='name' id='name' placeholder="Usuario" required>
+						</div>
+						<div class="form-row form-group col-12">
+							<input type='password' class="form-control w-100" name='password' id='password' placeholder="Contraseña" required>
+						</div>
+						<div class="form-row form-group col-12">
+							<input type="submit" class="form-control w-100" value="Iniciar sesión">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% load staticfiles %}
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+
+</body>
+
+</html>
